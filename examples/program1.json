@@ -1,0 +1,23 @@
+[
+	{
+		"def" : "flowscript/nodes/main",
+		"in" : [
+			{ "type" : "integer", "label" : "Inicio" },
+			{ "type" : "integer", "label" : "Total" }
+		],
+		"out	": [{ "type" : "integer", "label" : "Total" }],
+	}, {
+		"def" : "flowscript/nodes/switch",
+		"label": "<= 10",
+		"in" : [
+			{ "type": "integer", "label": "valor", "from": [0, 0] }
+		],
+		"out" : [
+			{ "type": "integer" },
+			{ "type": "integer" }
+		],
+		"rules" : [
+			{ "in": 0, "rel": ">", "that": [0, 1], "out": 1 }
+		]
+	}
+]
